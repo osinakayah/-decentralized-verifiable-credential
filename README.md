@@ -7,9 +7,6 @@
 
 # Dependencies
 
-
-
-
 1. Material UI
 2. APISauce
 3. Ramda
