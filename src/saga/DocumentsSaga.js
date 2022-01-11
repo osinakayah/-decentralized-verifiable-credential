@@ -50,6 +50,7 @@ function* attemptToCreatePresentation(api, { data }) {
         deep: true
     });
 
+    console.log(signedVS)
     const context = signedVS['@context'];
     const type = signedVS.type;
     if (data.context && data.context?.length > 0) {
@@ -59,13 +60,13 @@ function* attemptToCreatePresentation(api, { data }) {
         type.push(data.type)
     }
     const requestData = {
-        holder:  data.id?.length > 0? data.id: signedVS.id,
+        holder:  process.env.REACT_APP_HOLDER_DID,
         credentials: [
             {
                 ...signedVS,
                 ['@context']: context,
-                type
-
+                type,
+                id: data.id?.length > 0? data.id: signedVS.id,
             }
         ]
     }

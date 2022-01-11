@@ -72,7 +72,7 @@ const NewCertificateScreen = function () {
                             <TextField
                                 id="id"
                                 label="ID"
-                                placeholder={'Holder DID'}
+                                placeholder={'ID'}
                                 onChange={(event)=>{
                                     setNewPresentationData(prevState => {
                                         return {
