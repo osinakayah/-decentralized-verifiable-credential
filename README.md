@@ -1,4 +1,14 @@
+# Installation
+1. Clone repo
+2. `yarn install`
+3. `cp .env.example .env`
+4. Fill the .env file with the configuration.
+5. `yarn start`
+
 # Dependencies
+
+
+
 
 1. Material UI
 2. APISauce
